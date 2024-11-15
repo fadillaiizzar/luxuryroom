@@ -42,8 +42,8 @@ export default function Home() {
     };
 
     return (
-        <div className="bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-teal-400 to-gray-800 min-h-screen pb-14 px-6">
-            <nav className="flex justify-center p-10 px-0 pb-4">
+        <div className="bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-teal-400 to-gray-800 min-h-screen pb-12 px-6">
+            <nav className="flex justify-center p-10 px-0 sm:pb-4 pb-10">
                 <div className="flex flex-col items-end w-[600px]">
                     <div
                         className="flex bg-black opacity-40 hover:opacity-80 cursor-pointer rounded-full w-11 h-11 justify-center items-center"
