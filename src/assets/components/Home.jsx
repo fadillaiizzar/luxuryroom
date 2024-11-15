@@ -42,7 +42,7 @@ export default function Home() {
     };
 
     return (
-        <div className="bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-teal-400 to-gray-800 h-full pb-12 px-6">
+        <div className="bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-teal-400 to-gray-800 h-auto pb-12 px-6">
             <nav className="flex justify-center p-10 px-0 pb-4">
                 <div className="flex flex-col items-end w-[600px]">
                     <div
