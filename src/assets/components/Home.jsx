@@ -42,7 +42,7 @@ export default function Home() {
     };
 
     return (
-        <div className="bg-gradient-to-b from-green-800 to-green-600 h-screen px-6">
+        <div className="bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-teal-400 to-gray-800 h-screen px-6">
             <nav className="flex justify-center p-10 px-0 pb-6">
                 <div className="flex flex-col items-end w-[600px]">
                     <div
@@ -60,7 +60,7 @@ export default function Home() {
                     </div>
 
                     <h1 className="pt-4 pb-1 font-poppins text-2xl text-white">Luxury Room</h1>
-                    <p className="font-poppins text-white">Rent Apartement Jogja</p>
+                    <p className="font-poppins text-white">Rent Apartment Jogja</p>
 
                     <div className="w-full py-8 pt-10">
                         <Card Admin="Admin 1" phoneNumber="6282326813926" showMenuPopup={showMenuPopup} />
