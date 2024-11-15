@@ -101,7 +101,7 @@ export default function Home() {
             {isMenuPopupVisible && (
                 <div className="fixed inset-0 bg-black bg-opacity-50 z-40 flex justify-center items-center px-5">
                     <div className="relative px-0 bg-white rounded-xl shadow-[0_25px_50px_-12px_rgba(255,255,255,0.6)] items-center w-[400px] sm:px-0 sm:w-[500px] md:px-0 md:w-[560px]">
-                        <div className="flex items-center bg-dark-blue rounded-t-lg pl-9 pt-5 pb-2">
+                        <div className="flex items-center bg-dark-blue rounded-t-lg pl-5 sm:pl-9 pt-5 pb-2">
                             {/* Tombol Close */}
                             <button onClick={closeMenuPopup} className="flex items-center text-teal-600 pr-3">
                                 <FontAwesomeIcon icon={faAngleLeft} className="text-xl" />
@@ -120,7 +120,7 @@ export default function Home() {
             {isMenu2PopupVisible && (
                 <div className="fixed inset-0 bg-black bg-opacity-50 z-40 flex justify-center items-center px-5">
                     <div className="relative px-0 bg-white rounded-xl shadow-[0_25px_50px_-12px_rgba(255,255,255,0.6)] items-center w-[400px] sm:px-0 sm:w-[500px] md:px-0 md:w-[560px]">
-                        <div className="flex items-center bg-dark-blue rounded-t-lg pl-9 pt-5 pb-2">
+                        <div className="flex items-center bg-dark-blue rounded-t-lg pl-5 sm:pl-9 pt-5 pb-2">
                             {/* Tombol Close */}
                             <button onClick={closeMenu2Popup} className="flex items-center text-teal-600 pr-3">
                                 <FontAwesomeIcon icon={faAngleLeft} className="text-xl" />
