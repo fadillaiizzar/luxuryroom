@@ -87,7 +87,7 @@ export default function Home() {
                             <p className="flex-grow text-left text-green-800 text-lg font-semibold">Luxury Room</p>
                         </div>
 
-                        <Menu text="@luxuryroom" imgMenu="/logo.jpeg" phoneNumber="6282326813926" link="luxuryroom.vercel.app"/>
+                        <Menu text="@luxuryroom" imgMenu="/logo.jpeg" phoneNumber="6282326813926" link="https://wa.me/6282326813926?text=Hallo Luxury Room!"/>
                     </div>
                 </div>
             )}
