@@ -42,8 +42,8 @@ export default function Home() {
     };
 
     return (
-        <div className="bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-teal-400 to-gray-800 h-screen px-6">
-            <nav className="flex justify-center p-10 px-0 pb-6">
+        <div className="bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-teal-400 to-gray-800 h-full pb-12 px-6">
+            <nav className="flex justify-center p-10 px-0 pb-4">
                 <div className="flex flex-col items-end w-[600px]">
                     <div
                         className="flex bg-black opacity-40 hover:opacity-80 cursor-pointer rounded-full w-11 h-11 justify-center items-center"
@@ -55,6 +55,11 @@ export default function Home() {
 
             <main className="flex justify-center items-center px-0">
                 <div className="flex flex-col items-center w-[600px]">
+                    <div className='pb-11 text-center'>
+                        <h2 className='text-2xl max-w-sm text-white font-poppins font-bold'> Penginapan Apartemen 
+                        Murah Seluruh Wilayah Jogja</h2>
+                    </div>
+
                     <div className="w-28 h-28">
                         <img src="/logo.jpeg" className="h-full w-full rounded-full" />
                     </div>
@@ -67,7 +72,7 @@ export default function Home() {
                         <Card Admin="Admin 2" phoneNumber="6285870797386" showMenuPopup={showMenu2Popup} />
                     </div>
 
-                    <div className="mt-3">
+                    <div className="mt-0">
                         <button className="bg-white font-poppins text-black opacity-60 hover:opacity-100 p-3 px-8 rounded-full">luxuryroom</button>
                     </div>
                 </div>
@@ -77,7 +82,7 @@ export default function Home() {
             {isPopupVisible && (
                 <div className="fixed inset-0 bg-black bg-opacity-50 z-40 flex justify-center items-center px-5">
                     <div className="relative px-0 bg-white rounded-xl shadow-[0_25px_50px_-12px_rgba(255,255,255,0.6)] items-center w-[400px] sm:px-0 sm:w-[500px] md:px-0 md:w-[560px]">
-                        <div className="flex items-center bg-dark-blue rounded-t-lg pl-9 pt-5 pb-2">
+                        <div className="flex items-center bg-dark-blue rounded-t-lg pl-5 sm:pl-9 pt-5 pb-2">
                             {/* Tombol Close */}
                             <button onClick={closePopup} className="flex items-center text-teal-600 pr-3">
                                 <FontAwesomeIcon icon={faAngleLeft} className="text-xl" />
@@ -103,7 +108,7 @@ export default function Home() {
                             </button>
 
                             {/* Judul */}
-                            <p className="flex-grow text-left text-teal-600 text-lg font-semibold">Admin 1</p>
+                            <p className="flex-grow text-left text-teal-600 text-lg font-poppins font-semibold">Admin 1</p>
                         </div>
 
                         <Menu text="Admin 1" imgMenu="/wa.png" phoneNumber="6282326813926" link="https://wa.me/6282326813926?text=Hallo Luxury Room!"/>
@@ -122,7 +127,7 @@ export default function Home() {
                             </button>
 
                             {/* Judul */}
-                            <p className="flex-grow text-left text-teal-600 text-lg font-semibold">Admin 2</p>
+                            <p className="flex-grow text-left text-teal-600 text-lg font-poppins font-semibold">Admin 2</p>
                         </div>
 
                         <Menu text="Admin 2" imgMenu="/wa.png" phoneNumber="6285870797386" link="https://wa.me/6285870797386?text=Hallo Luxury Room!"/>

@@ -11,7 +11,7 @@ export default function Menu({ text, imgMenu, phoneNumber, link }) {
                     </a>
                 </div>
 
-                <h1 className='text-lg sm:text-xl text-white font-bold'>{text}</h1>
+                <h1 className='text-lg sm:text-xl text-white font-bold font-poppins'>{text}</h1>
             </div>
             
             <div className="grid grid-cols-4 gap-2 p-4 sm:p-6 px-0 rounded-2xl text-center items-center cursor-pointer">
@@ -58,7 +58,7 @@ function Medsos({ Namedsos, imgSrc, link, onCopy }) {
             <div className="w-12 h-12 sm:w-16 sm:h-16"> 
                 <img src={imgSrc} className="h-full w-full rounded-full" />
             </div>
-            <p className="mt-2 text-xs sm:text-sm text-center text-teal-600"> 
+            <p className="mt-2 text-xs sm:text-sm text-center text-teal-600 font-poppins"> 
                 {Namedsos}
             </p>
         </div>
