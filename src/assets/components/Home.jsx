@@ -59,7 +59,7 @@ export default function Home() {
                         <img src="/logo.jpeg" className="h-full w-full rounded-full" />
                     </div>
 
-                    <h1 className="pt-4 pb-1 font-poppins text-2xl text-white">Luxury Room</h1>
+                    <h1 className="pt-4 pb-1 font-poppins text-2xl text-white font-bold">Luxury Room</h1>
                     <p className="font-poppins text-white">Rent Apartment Jogja</p>
 
                     <div className="w-full py-8 pt-10">
@@ -79,12 +79,12 @@ export default function Home() {
                     <div className="relative px-0 bg-white rounded-xl shadow-[0_25px_50px_-12px_rgba(255,255,255,0.6)] items-center w-[400px] sm:px-0 sm:w-[500px] md:px-0 md:w-[560px]">
                         <div className="flex items-center bg-dark-blue rounded-t-lg pl-9 pt-5 pb-2">
                             {/* Tombol Close */}
-                            <button onClick={closePopup} className="flex items-center text-green-800 pr-3">
+                            <button onClick={closePopup} className="flex items-center text-teal-600 pr-3">
                                 <FontAwesomeIcon icon={faAngleLeft} className="text-xl" />
                             </button>
 
                             {/* Judul */}
-                            <p className="flex-grow text-left text-green-800 text-lg font-semibold">Luxury Room</p>
+                            <p className="flex-grow text-left text-teal-6000 text-lg font-semibold">Luxury Room</p>
                         </div>
 
                         <Menu text="@luxuryroom" imgMenu="/logo.jpeg" phoneNumber="6282326813926" link="https://wa.me/6282326813926?text=Hallo Luxury Room!"/>
@@ -98,12 +98,12 @@ export default function Home() {
                     <div className="relative px-0 bg-white rounded-xl shadow-[0_25px_50px_-12px_rgba(255,255,255,0.6)] items-center w-[400px] sm:px-0 sm:w-[500px] md:px-0 md:w-[560px]">
                         <div className="flex items-center bg-dark-blue rounded-t-lg pl-9 pt-5 pb-2">
                             {/* Tombol Close */}
-                            <button onClick={closeMenuPopup} className="flex items-center text-green-800 pr-3">
+                            <button onClick={closeMenuPopup} className="flex items-center text-teal-600 pr-3">
                                 <FontAwesomeIcon icon={faAngleLeft} className="text-xl" />
                             </button>
 
                             {/* Judul */}
-                            <p className="flex-grow text-left text-green-800 text-lg font-semibold">Admin 1</p>
+                            <p className="flex-grow text-left text-teal-600 text-lg font-semibold">Admin 1</p>
                         </div>
 
                         <Menu text="Admin 1" imgMenu="/wa.png" phoneNumber="6282326813926" link="https://wa.me/6282326813926?text=Hallo Luxury Room!"/>
@@ -117,12 +117,12 @@ export default function Home() {
                     <div className="relative px-0 bg-white rounded-xl shadow-[0_25px_50px_-12px_rgba(255,255,255,0.6)] items-center w-[400px] sm:px-0 sm:w-[500px] md:px-0 md:w-[560px]">
                         <div className="flex items-center bg-dark-blue rounded-t-lg pl-9 pt-5 pb-2">
                             {/* Tombol Close */}
-                            <button onClick={closeMenu2Popup} className="flex items-center text-green-800 pr-3">
+                            <button onClick={closeMenu2Popup} className="flex items-center text-teal-600 pr-3">
                                 <FontAwesomeIcon icon={faAngleLeft} className="text-xl" />
                             </button>
 
                             {/* Judul */}
-                            <p className="flex-grow text-left text-green-800 text-lg font-semibold">Admin 2</p>
+                            <p className="flex-grow text-left text-teal-600 text-lg font-semibold">Admin 2</p>
                         </div>
 
                         <Menu text="Admin 2" imgMenu="/wa.png" phoneNumber="6285870797386" link="https://wa.me/6285870797386?text=Hallo Luxury Room!"/>
@@ -151,14 +151,14 @@ function Card({ Admin, phoneNumber, showMenuPopup }) {
                 </div>
 
                 {/* Teks Admin berada di tengah */}
-                <p className="font-poppins text-white group-hover:text-green-800 flex-grow text-center">
+                <p className="font-poppins text-white group-hover:text-teal-600 flex-grow text-center font-bold">
                     {Admin}
                 </p>
             </a>
 
             {/* Tombol ellipsis untuk memunculkan menu */}
             <div className="font-poppins text-white p-4 flex items-center" onClick={showMenuPopup}>
-                <FontAwesomeIcon icon={faEllipsisVertical} className="text-xl text-white group-hover:text-green-800" />
+                <FontAwesomeIcon icon={faEllipsisVertical} className="text-xl text-white group-hover:text-teal-600" />
             </div>
         </div>
     );
