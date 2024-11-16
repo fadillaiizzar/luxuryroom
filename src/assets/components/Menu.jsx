@@ -27,16 +27,18 @@ export default function Menu({ text, imgMenu, phoneNumber, link }) {
 
                 {/* WhatsApp, now using dynamic phone number */}
                 <Medsos 
-                    Namedsos="WhatsApp" 
+                    Namedsos="Admin 1" 
                     imgSrc="/wa.png" 
-                    link={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(preText)}`} 
+                    link="https://wa.me/6282326813926?text=Hallo Luxury Room!"
+                    // link={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(preText)}`} 
                 />
 
                 {/* Instagram */}
                 <Medsos 
-                    Namedsos="Instagram" 
-                    imgSrc="/ig.png" 
-                    link="https://instagram.com/yourusn" 
+                    Namedsos="Admin 2" 
+                    imgSrc="/wa.png" 
+                    link="https://wa.me/6285870797386?text=Hallo Luxury Room!"
+                    // link={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(preText)}`} 
                 />
             </div>
         </div>

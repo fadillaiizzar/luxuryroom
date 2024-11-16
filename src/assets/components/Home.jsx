@@ -78,7 +78,7 @@ export default function Home() {
                     <h1 className="pt-4 pb-1 font-poppins text-2xl text-white font-bold">Luxury Room</h1>
                     <p className="font-poppins text-white">Rent Apartment Jogja</p>
 
-                    <div className="w-full py-8 pt-8 pb-3">
+                    <div className="w-full py-8 pt-8 pb-5 sm:pb-3">
                         <Card imgCard="/travel.jpeg" Admin="Traveloka" showMenuPopup={showTravelPopup}/>
                         <Card imgCard="/wa.png" Admin="Admin 1" phoneNumber="6282326813926" showMenuPopup={showMenuPopup} />
                         <Card imgCard="/wa.png" Admin="Admin 2" phoneNumber="6285870797386" showMenuPopup={showMenu2Popup} />
