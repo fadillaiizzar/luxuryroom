@@ -10,6 +10,7 @@ export default function Home() {
     const [isPopupVisible, setPopupVisible] = useState(false);
     const [isMenuPopupVisible, setMenuPopupVisible] = useState(false); // Pop-up untuk menu
     const [isMenu2PopupVisible, setMenu2PopupVisible] = useState(false);
+    const [isTravelPopupVisible, setTravelPopupVisible] = useState(false);
 
     // Fungsi untuk menampilkan pop-up utama
     const showPopup = () => {
@@ -41,9 +42,19 @@ export default function Home() {
         setMenu2PopupVisible(false);
     };
 
+    // Fungsi untuk menampilkan pop-up menu
+    const showTravelPopup = () => {
+        setTravelPopupVisible(true);
+    };
+    
+    // Fungsi untuk menutup pop-up menu
+    const closeTravelPopup = () => {
+        setTravelPopupVisible(false);
+    };
+
     return (
-        <div className="bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-teal-400 to-gray-800 min-h-screen pb-12 px-6">
-            <nav className="flex justify-center p-10 px-0 sm:pb-4 pb-10">
+        <div className="bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-teal-400 to-gray-800 min-h-screen pb-8 px-6">
+            {/* <nav className="flex justify-center p-8 pb-6 px-0 sm:pb-4 pb-10">
                 <div className="flex flex-col items-end w-[600px]">
                     <div
                         className="flex bg-black opacity-40 hover:opacity-80 cursor-pointer rounded-full w-11 h-11 justify-center items-center"
@@ -51,12 +62,12 @@ export default function Home() {
                         <FontAwesomeIcon icon={faEllipsis} className="text-xl text-white" />
                     </div>
                 </div>
-            </nav>
+            </nav> */}
 
-            <main className="flex justify-center items-center px-0">
+            <main className="flex justify-center items-center px-0 pt-7">
                 <div className="flex flex-col items-center w-[600px]">
-                    <div className='pb-11 text-center'>
-                        <h2 className='text-2xl max-w-sm text-white font-poppins font-bold'> Penginapan Apartemen 
+                    <div className='pb-7 text-center'>
+                        <h2 className='text-xl max-w-sm text-white font-poppins font-bold'> Penginapan Apartemen 
                         Murah Seluruh Wilayah Jogja</h2>
                     </div>
 
@@ -67,9 +78,10 @@ export default function Home() {
                     <h1 className="pt-4 pb-1 font-poppins text-2xl text-white font-bold">Luxury Room</h1>
                     <p className="font-poppins text-white">Rent Apartment Jogja</p>
 
-                    <div className="w-full py-8 pt-10">
-                        <Card Admin="Admin 1" phoneNumber="6282326813926" showMenuPopup={showMenuPopup} />
-                        <Card Admin="Admin 2" phoneNumber="6285870797386" showMenuPopup={showMenu2Popup} />
+                    <div className="w-full py-8 pt-8 pb-3">
+                        <Card imgCard="/travel.jpeg" Admin="Traveloka" showMenuPopup={showTravelPopup}/>
+                        <Card imgCard="/wa.png" Admin="Admin 1" phoneNumber="6282326813926" showMenuPopup={showMenuPopup} />
+                        <Card imgCard="/wa.png" Admin="Admin 2" phoneNumber="6285870797386" showMenuPopup={showMenu2Popup} />
                     </div>
 
                     <div className="mt-0">
@@ -93,6 +105,25 @@ export default function Home() {
                         </div>
 
                         <Menu text="@luxuryroom" imgMenu="/logo.jpeg" phoneNumber="6282326813926" link="https://wa.me/6282326813926?text=Hallo Luxury Room!"/>
+                    </div>
+                </div>
+            )}
+
+            {/* Pop-up Overlay untuk Traveloka*/}
+            {isTravelPopupVisible && (
+                <div className="fixed inset-0 bg-black bg-opacity-50 z-40 flex justify-center items-center px-5">
+                    <div className="relative px-0 bg-white rounded-xl shadow-[0_25px_50px_-12px_rgba(255,255,255,0.6)] items-center w-[400px] sm:px-0 sm:w-[500px] md:px-0 md:w-[560px]">
+                        <div className="flex items-center bg-dark-blue rounded-t-lg pl-5 sm:pl-9 pt-5 pb-2">
+                            {/* Tombol Close */}
+                            <button onClick={closeTravelPopup} className="flex items-center text-teal-600 pr-3">
+                                <FontAwesomeIcon icon={faAngleLeft} className="text-xl" />
+                            </button>
+
+                            {/* Judul */}
+                            <p className="flex-grow text-left text-teal-600 text-lg font-poppins font-semibold">Traveloka</p>
+                        </div>
+
+                        <Menu text="Traveloka" imgMenu="/travel.jpeg" phoneNumber="6282326813926" link="https://www.traveloka.com/hotel/indonesia/luxury-room-9000005469552?contexts=%7B%22sourceHotelDetail%22:%22SHARE_BUTTON%22%7D&spec=20-11-2024.21-11-2024.1.1.HOTEL.9000005469552.Luxury%20Room.2&force-app=false"/>
                     </div>
                 </div>
             )}
@@ -138,21 +169,25 @@ export default function Home() {
     );
 }
 
-function Card({ Admin, phoneNumber, showMenuPopup }) {
+function Card({ Admin, phoneNumber, showMenuPopup, imgCard }) {
     const preFilledText = "Halo, saya tertarik dengan penginapan apartemen di Jogja, bisakah Anda beri info lebih lanjut?";
+    const link =
+    Admin === 'Traveloka'
+        ? 'https://www.traveloka.com/hotel/indonesia/luxury-room-9000005469552?contexts=%7B%22sourceHotelDetail%22:%22SHARE_BUTTON%22%7D&spec=20-11-2024.21-11-2024.1.1.HOTEL.9000005469552.Luxury%20Room.2&force-app=false'
+        : `https://wa.me/${phoneNumber}?text=${encodeURIComponent('Halo, saya tertarik dengan penginapan apartemen di Jogja, bisakah Anda beri info lebih lanjut?')}`;
 
     return (
-        <div className="flex justify-between items-center border-2 rounded-full mb-5 cursor-pointer hover:bg-white group">
+        <div className="flex justify-between items-center border-2 rounded-full mb-3 cursor-pointer hover:bg-white group">
             {/* Gambar WhatsApp dan Teks Admin dalam satu box yang bisa diklik */}
             <a 
-                href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(preFilledText)}`} 
+                href={link} 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="flex items-center w-full px-4 pl-0">
 
                 {/* Box Gambar WhatsApp */}
                 <div className="w-16 h-16 flex justify-center p-2">
-                    <img src="/wa.png" className="rounded-full" />
+                    <img src={imgCard} className="rounded-full" />
                 </div>
 
                 {/* Teks Admin berada di tengah */}

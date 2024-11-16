@@ -18,6 +18,13 @@ export default function Menu({ text, imgMenu, phoneNumber, link }) {
                 {/* Copy link to clipboard */}
                 <Medsos Namedsos="Copy" imgSrc="/copy.png" onCopy={() => copyToClipboard("luxuryroom.vercel.app")} />
 
+                {/* Facebook */}
+                <Medsos 
+                    Namedsos="Traveloka" 
+                    imgSrc="/travel.jpeg" 
+                    link="https://www.traveloka.com/hotel/indonesia/luxury-room-9000005469552?contexts=%7B%22sourceHotelDetail%22:%22SHARE_BUTTON%22%7D&spec=20-11-2024.21-11-2024.1.1.HOTEL.9000005469552.Luxury%20Room.2&force-app=false" 
+                />
+
                 {/* WhatsApp, now using dynamic phone number */}
                 <Medsos 
                     Namedsos="WhatsApp" 
@@ -30,13 +37,6 @@ export default function Menu({ text, imgMenu, phoneNumber, link }) {
                     Namedsos="Instagram" 
                     imgSrc="/ig.png" 
                     link="https://instagram.com/yourusn" 
-                />
-
-                {/* Facebook */}
-                <Medsos 
-                    Namedsos="Facebook" 
-                    imgSrc="/fb.png" 
-                    link="https://www.facebook.com/yourusn" 
                 />
             </div>
         </div>
